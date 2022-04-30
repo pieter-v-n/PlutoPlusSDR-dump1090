@@ -4,3 +4,6 @@ testfiles/*.bin
 misc
 frames.js
 .*.swp
+/.idea
+dump1090.o
+anet.o
