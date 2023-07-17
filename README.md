@@ -1,7 +1,7 @@
 Dump1090 README
 ===
 
-Dump 1090 is a Mode S decoder specifically designed for RTLSDR devices.
+Dump 1090 is a Mode S decoder specifically designed for Pluto+ SDR devices.
 
 The main features are:
 
