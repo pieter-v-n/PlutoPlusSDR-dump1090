@@ -1,4 +1,4 @@
-SYSROOT = /home/kentuckyfrieddata/pluto-0.34.sysroot/
+SYSROOT = $HOME/staging/
 PKG_CONFIG_PATH=${SYSROOT}/usr/lib/pkgconfig
 CC=arm-linux-gnueabihf-gcc
 CFLAGS?=--sysroot=${SYSROOT} -O2 -g -Wall -W 
