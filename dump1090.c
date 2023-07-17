@@ -1,4 +1,4 @@
-/* Mode1090, a Mode S messages decoder for RTLSDR devices.
+/* Mode1090, a Mode S messages decoder for Pluto+ SDR devices.
  * Copyright (C) 2017 by Jiang Wei <jiangwei0402@gmail.com>
  * Copyright (C) 2012 by Salvatore Sanfilippo <antirez@gmail.com>
  *
@@ -415,7 +415,7 @@ void modesInitPLUTOSDR(void) {
 /* We use a thread reading data in background, while the main thread
  * handles decoding and visualization of data to the user.
  *
- * The reading thread calls the RTLSDR API to read data asynchronously, and
+ * The reading thread calls the Pluto+ SDR API to read data asynchronously, and
  * uses a callback to populate the data buffer.
  * A Mutex is used to avoid races with the decoding thread. */
 void plutosdrCallback(unsigned char *buf, uint32_t len){
@@ -437,7 +437,7 @@ void plutosdrCallback(unsigned char *buf, uint32_t len){
 
 }
 /* This is used when --ifile is specified in order to read data from file
- * instead of using an RTLSDR device. */
+ * instead of using an Pluto+ device. */
 void readDataFromFile(void) {
 	pthread_mutex_lock(&Modes.data_mutex);
 	while (1) {
@@ -451,7 +451,7 @@ void readDataFromFile(void) {
 
 		if (Modes.interactive) {
 			/* When --ifile and --interactive are used together, slow down
-			 * playing at the natural rate of the RTLSDR received. */
+			 * playing at the natural rate of the Pluto+ SDR received. */
 			pthread_mutex_unlock(&Modes.data_mutex);
 			usleep(5000);
 			pthread_mutex_lock(&Modes.data_mutex);
@@ -1611,7 +1611,7 @@ good_preamble:
 }
 
 /* When a new message is available, because it was decoded from the
- * RTL device, file, or received in the TCP input port, or any other
+ * Pluto+ SDR device, file, or received in the TCP input port, or any other
  * way we can receive a decoded message, we call this function in order
  * to use the message.
  *
@@ -2519,7 +2519,7 @@ void showHelp(void) {
 			"--interactive-ttl <sec>  Remove from list if idle for <sec> (default: 60).\n"
 			"--raw                    Show only messages hex values.\n"
 			"--net                    Enable networking.\n"
-			"--net-only               Enable just networking, no RTL device or file used.\n"
+			"--net-only               Enable just networking, no SDR device or file used.\n"
 			"--net-ro-port <port>     TCP listening port for raw output (default: 30002).\n"
 			"--net-ri-port <port>     TCP listening port for raw input (default: 30001).\n"
 			"--net-http-port <port>   HTTP server port (default: 8080).\n"
