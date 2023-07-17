@@ -1,4 +1,4 @@
-/* M/de1090, a Mode S messages decoder for RTLSDR devices.
+/* Mode1090, a Mode S messages decoder for RTLSDR devices.
  * Copyright (C) 2017 by Jiang Wei <jiangwei0402@gmail.com>
  * Copyright (C) 2012 by Salvatore Sanfilippo <antirez@gmail.com>
  *
