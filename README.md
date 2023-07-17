@@ -35,7 +35,7 @@ Type "make".
 Normal usage
 ---
 
-To capture traffic directly from your RTL device and show the captured traffic
+To capture traffic directly from your Pluto+ SDR device and show the captured traffic
 on standard output, just run the program without options at all:
 
     ./dump1090
@@ -58,7 +58,7 @@ In interactive mode it is possible to have a less information dense but more
 all the recently seen aircrafts with some additional information such as
 altitude and flight number, extracted from the received Mode S packets.
 
-Using files as source of data
+Using files as source of data (not applicable to Pluto+ SDR)
 ---
 
 To decode data from file, use:
@@ -145,7 +145,7 @@ It is important to note that what is received via port 30001 is also
 broadcasted to clients listening to port 30002.
 
 In general everything received from port 30001 is handled exactly like the
-normal traffic from RTL devices or from file when --ifile is used.
+normal traffic from Pluto+ SDR devices or from file when --ifile is used.
 
 It is possible to use Dump1090 just as an hub using --ifile with /dev/zero
 as argument as in the following example:
@@ -243,10 +243,10 @@ based on how the messages look graphically.
 How to test the program?
 ---
 
-If you have an RTLSDR device and you happen to be in an area where there
+If you have an Pluto+ SDR device and you happen to be in an area where there
 are aircrafts flying over your head, just run the program and check for signals.
 
-However if you don't have an RTLSDR device, or if in your area the presence
+However if you don't have an Pluto+ SDR device, or if in your area the presence
 of aircrafts is very limited, you may want to try the sample file distributed
 with the Dump1090 distribution under the "testfiles" directory.
 
