@@ -27,6 +27,13 @@ minimalism of the implementation. However there is a
 [much more feature complete fork](https://github.com/MalcolmRobb/dump1090)
 available, developed by MalcolmRobb.
 
+Prerequisites
+---
+We are going to build on an x86 platform for the Pluto+, which is ARM based.
+So install the cross-compilation tool chain:
+
+    apt-get install -y gcc-arm-linux* g++-arm-linux*
+    
 Installation
 ---
 
