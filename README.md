@@ -33,6 +33,13 @@ We are going to build on an x86 platform for the Pluto+, which is ARM based.
 So install the cross-compilation tool chain:
 
     apt-get install -y gcc-arm-linux* g++-arm-linux*
+
+My Pluto+ firmware is based on: [Pluto+ firmware](https://github.com/DeonMarais64/PlutoPlusSDR-FW),
+in particular version v0.37-dirty.
+We need a sysroot to build against with this same version.
+You need to copy that sysroot from the release, gunzip  and untar sysroot-v0.37.tar.gz and place it in your $HOME folder.
+
+
     
 Installation
 ---
