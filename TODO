@@ -4,6 +4,6 @@ TODO
 * Improve the web interface gmap.html.
 * Enhance the algorithm to reliably decode more messages.
 * Enable 2nd RX interface
-* Enable decoding of Mode A and Mode C messages
+* Enable decoding of Mode A and Mode C messages (ATCRBS)
 * Enable Phase shift based Monopulse beamforming and direction finding (Azimuth)
 * Enable communication of direction finding results to mate decoder for triangularization of Azimuth
