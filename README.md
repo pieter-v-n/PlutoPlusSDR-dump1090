@@ -30,9 +30,8 @@ available, developed by MalcolmRobb.
 Prerequisites
 ---
 We are going to build on an x86 platform for the Pluto+, which is ARM based.
-So install the cross-compilation tool chain:
-
-    apt-get install -y gcc-arm-linux* g++-arm-linux*
+So install the cross-compilation tool chain, follow the instruction from Analog Devices at:
+[build environment](https://wiki.analog.com/university/tools/pluto/devs/embedded_code).
 
 My Pluto+ firmware is based on: [Pluto+ firmware](https://github.com/DeonMarais64/PlutoPlusSDR-FW),
 in particular version v0.37-dirty.
