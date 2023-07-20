@@ -47,6 +47,9 @@ Copyright (C) 2017 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.`
 - Download the sysroot of the firmware (version v0.37):
+  * `wget https://github.com/analogdevicesinc/plutosdr-fw/releases/download/v0.37/sysroot-v0.37.tar.gz`
+  * `tar zxvf sysroot-v0.37.tar.gz`
+  * `mv staging $HOME/pluto-0.37.sysroot`
 - Create a project directory:
   * `mkdir /tmp/plutoapp; cd /tmp/plutoapp`
 - Get the example code:
