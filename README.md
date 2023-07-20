@@ -29,9 +29,31 @@ available, developed by MalcolmRobb.
 
 Prerequisites
 ---
-We are going to build on an x86 platform for the Pluto+, which is ARM based.
+We are going to build on a host based on an x86 architecture to get executables for the Pluto+, which is ARM based.
 So install the cross-compilation tool chain, follow the instruction from Analog Devices at:
-[build environment](https://wiki.analog.com/university/tools/pluto/devs/embedded_code).
+[build environment](https://wiki.analog.com/university/tools/pluto/devs/embedded_code) and [changes since v0.36](https://github.com/analogdevicesinc/plutosdr-fw/releases/tag/v0.36).
+
+Summarized:
+- Install the Linaro toolchain:
+  `cd /usr/local/bin`
+  `sudo wget http://releases.linaro.org/components/toolchain/binaries/7.2-2017.11/arm-linux-gnueabihf/gcc-linaro-7.2.1-2017.11-i686_arm-linux-gnueabihf.tar.xz`
+  `sudo tar -xf gcc-linaro-7.2.1-2017.11-i686_arm-linux-gnueabihf.tar.xz`
+  `export PATH=$PATH:/usr/local/bin/gcc-linaro-7.2.1-2017.11-i686_arm-linux-gnueabihf/bin`
+- Make sure your compiler is in your path:
+  `arm-linux-gnueabihf-gcc --version`
+  This should result in:
+  `arm-linux-gnueabihf-gcc (Linaro GCC 7.2-2017.11-rc1) 7.2.1 20171011
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.`
+- Download the sysroot of the firmware (version v0.37):
+- Create a project directory:
+  ` mkdir /tmp/plutoapp; cd /tmp/plutoapp
+- Get the example code:
+  `wget https://raw.githubusercontent.com/analogdevicesinc/libiio/master/examples/ad9361-iiostream.c`
+- Cross-compile the code for the Pluto:
+  `rm-linux-gnueabihf-gcc -mfloat-abi=hard  --sysroot=$HOME/pluto-0.37.sysroot -std=gnu99 -g -o pluto_stream ad9361-iiostream.c -lpthread -liio -lm -Wall -Wextra`
+  
 
 My Pluto+ firmware is based on: [Pluto+ firmware](https://github.com/DeonMarais64/PlutoPlusSDR-FW),
 in particular version v0.37-dirty.
