@@ -48,7 +48,7 @@ This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.`
 - Download the sysroot of the firmware (version v0.37):
 - Create a project directory:
-  * ` mkdir /tmp/plutoapp; cd /tmp/plutoapp
+  * `mkdir /tmp/plutoapp; cd /tmp/plutoapp`
 - Get the example code:
   * `wget https://raw.githubusercontent.com/analogdevicesinc/libiio/master/examples/ad9361-iiostream.c`
 - Cross-compile the code for the Pluto:
